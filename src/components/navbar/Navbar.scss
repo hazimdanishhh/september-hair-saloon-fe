@@ -1,0 +1,208 @@
+// =====================
+// NO SCROLL BODY
+// =====================
+.no-scroll {
+  overflow: hidden;
+  height: 100dvh;
+}
+
+// =====================
+// NAVBAR
+// =====================
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  height: 70px;
+  color: $neutral900;
+  background-color: $neutral100;
+  box-shadow: 0px 0px 5px 1px rgba($neutral900, 0.2);
+  backdrop-filter: blur(10px);
+  transition: 0.5s;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  margin: 0;
+
+  @media screen and (max-width: 1024px) {
+    &.active {
+      width: 100%;
+      height: 100dvh;
+      margin: 0;
+      transition: 0.5s;
+
+      padding: 1rem;
+      overflow: auto;
+    }
+  }
+
+  .navLogoContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+
+    @media screen and (max-width: 1024px) {
+      position: absolute;
+      top: 10px;
+    }
+
+    .navLogo {
+      height: 50px;
+      aspect-ratio: 1/1;
+    }
+  }
+
+  .navList {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1024px) {
+      display: none;
+
+      &.active {
+        top: 70px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        padding: 1rem;
+        width: 95%;
+      }
+    }
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary;
+        text-decoration: underline;
+        text-decoration-color: $primary;
+        text-underline-offset: 0.4rem;
+        transition: 0.3s;
+      }
+
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+        margin: 0;
+        justify-content: center;
+        border-bottom: 1px solid $neutral600;
+      }
+
+      a {
+        padding: 25px 1rem;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+      }
+    }
+
+    .linkActive {
+      color: $primary;
+      text-decoration: underline;
+      text-decoration-color: $primary;
+      text-underline-offset: 0.4rem;
+      transition: 0.3s;
+    }
+  }
+
+  .navButtonWrapper {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 1024px) {
+      position: absolute;
+      top: 15px;
+      right: 75px;
+
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+.navButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  background-color: $primary;
+  color: $neutral100;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: $neutral100;
+    color: $primary;
+    transition: 0.3s;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 0.5rem;
+  }
+}
+
+.navButton2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  background-color: $neutral100;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: $neutral100;
+    color: $primary;
+    transition: 0.3s;
+  }
+}
+
+.navTagLinkWrapper {
+  display: flex;
+  width: max-content;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 30px;
+  z-index: 800;
+  background-color: transparent;
+
+  .navTagLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 30px;
+    padding: 0.7rem 1.3rem;
+    background-color: rgba($primary, 0.6);
+    border: 1px solid rgb($neutral100, 0.4);
+    backdrop-filter: blur(50px);
+    color: $neutral100;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $primary;
+      color: $neutral100;
+      scale: 1.02;
+      transition: 0.3s;
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+}

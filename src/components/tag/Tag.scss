@@ -1,0 +1,12 @@
+.tag {
+  color: $primary;
+  border-radius: 30px;
+  border: 1px solid $primary;
+  width: fit-content;
+  padding: 0.4rem 0.8rem;
+
+  &.tag1 {
+    color: $neutral100;
+    border: 1px solid $neutral100;
+  }
+}

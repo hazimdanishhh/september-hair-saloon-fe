@@ -1,0 +1,121 @@
+.gallerySectionHeading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.gallerySectionLayout {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
+  width: 100%;
+  height: 70vh;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .gallerySegment {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow: hidden;
+
+    &.left {
+      width: 50%;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        aspect-ratio: 4/3;
+      }
+    }
+
+    &.middle {
+      width: 25%;
+
+      @media screen and (max-width: 768px) {
+        flex-direction: row;
+        width: 100%;
+        aspect-ratio: 4/3;
+      }
+    }
+
+    &.right {
+      width: 25%;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        aspect-ratio: 4/3;
+      }
+    }
+
+    // Apply to all image containers
+    .galleryImage {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+      border-radius: 10px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      &:hover img {
+        transform: scale(1.05);
+      }
+    }
+
+    // For left and right segments (direct img without wrapper)
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+.view-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid $primary;
+  background-color: $primary;
+  color: $neutral100;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  @media screen and (max-width: 768px) {
+    padding: 1rem 1.2rem;
+  }
+
+  .count {
+    font-weight: 400;
+  }
+
+  &:hover {
+    background-color: $neutral100;
+    color: $primary;
+    border: 1px solid $primary;
+  }
+}

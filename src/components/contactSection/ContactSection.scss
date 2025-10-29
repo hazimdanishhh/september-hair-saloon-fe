@@ -1,0 +1,20 @@
+.contactSectionContent {
+  align-items: stretch;
+  flex-direction: row;
+  gap: 0;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
+}
+
+.contactSectionBackground {
+  width: 50%;
+
+  @media screen and (max-width: 1024px) {
+    background-position: center;
+    min-height: 500px;
+    height: 50vh;
+    width: 100%;
+  }
+}

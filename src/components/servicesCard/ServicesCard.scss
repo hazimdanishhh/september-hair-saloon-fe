@@ -1,0 +1,105 @@
+.facilitiesCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0 0 10px 1px rgb($neutral800, 0.5);
+
+    .facilitiesCardImage {
+      img {
+        scale: 1.1;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  .facilitiesCardImage {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    transition: max-height 0.8s ease, opacity 0.5s ease;
+    max-height: 300px; // set a safe upper limit based on your image container
+    opacity: 1;
+
+    &:hover {
+      .servicesCardCTA {
+        opacity: 1;
+        transition: 0.3s;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      &.hidden {
+        max-height: 0;
+        opacity: 0;
+      }
+
+      .servicesCardCTA {
+        opacity: 1;
+        transition: 0.3s;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      scale: 1;
+      transition: 0.3s;
+    }
+
+    .servicesCardCTA {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      opacity: 0;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      color: $neutral900;
+      background: $neutral100;
+      border: 1px solid $neutral100;
+      padding: 0.8rem 1rem;
+      border-radius: 10px;
+      transition: 0.3s;
+
+      @media screen and (max-width: 1024px) {
+        opacity: 1;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  .facilitiesCardDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $neutral100;
+    color: $neutral900;
+    width: 100%;
+    padding: 1rem;
+    text-align: start;
+
+    .facilitiesCardHeading {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .plusIcon {
+      display: none;
+
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
+    }
+  }
+}

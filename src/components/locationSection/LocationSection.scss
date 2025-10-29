@@ -1,0 +1,195 @@
+// .locationSection {
+//   width: 100%;
+
+//   .locationWrapper {
+//     flex-direction: column;
+//     display: flex;
+//     flex: 0.5;
+//   }
+
+//   .locationSectionContent {
+//     display: none;
+
+//     @media screen and (max-width: 1024px) {
+//       display: block;
+//       padding: 3rem 0;
+//     }
+//   }
+// }
+
+// .locationInnerSection {
+//   width: 45%;
+
+//   @media screen and (max-width: 768px) {
+//     width: 100%;
+//   }
+// }
+
+// .locationContent {
+//   flex-direction: row;
+//   display: flex;
+//   flex: 0.5;
+//   margin-top: 20px;
+//   margin-bottom: 100px;
+//   justify-content: space-between;
+
+//   @media screen and (max-width: 768px) {
+//     flex-direction: column;
+//   }
+
+//   &.locationContent1 {
+//     flex-direction: row;
+//     display: flex;
+//     flex: 0.5;
+//     margin-top: 20px;
+//     margin-bottom: 100px;
+//     justify-content: space-between;
+//     @media screen and (max-width: 768px) {
+//       flex-direction: column-reverse;
+//     }
+//   }
+// }
+
+// .googleMapStyle {
+//   width: 100%;
+//   height: 400px;
+//   border-radius: 30px;
+// }
+
+// .mapPreviewContainer {
+//   width: 100%;
+//   height: 100%;
+//   border-radius: 15px;
+//   overflow: hidden;
+
+//   img {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//   }
+// }
+
+// .locationCardImage {
+//   width: 60%;
+
+//   transition: max-height 0.8s ease, opacity 0.5s ease;
+//   opacity: 1;
+//   margin-left: 20px;
+//   border-radius: 15px;
+//   @media screen and (max-width: 768px) {
+//     width: 100%;
+//     margin-left: 0px;
+//   }
+
+//   &.locationCardImage1 {
+//     width: 60%;
+
+//     transition: max-height 0.8s ease, opacity 0.5s ease;
+//     opacity: 1;
+//     margin-right: 20px;
+//     border-radius: 15px;
+//     @media screen and (max-width: 768px) {
+//       width: 100%;
+
+//       aspect-ratio: 0/1;
+//       margin-top: 40px;
+//     }
+//   }
+//   &.locationImg1 {
+//     aspect-ratio: 16/9;
+//     overflow: hidden;
+//     @media screen and (max-width: 768px) {
+//       aspect-ratio: 0/1;
+//       margin-top: 40px;
+//     }
+//   }
+
+//   @media screen and (max-width: 768px) {
+//     &.hidden {
+//       max-height: 0;
+//       opacity: 0;
+//     }
+//   }
+
+//   img {
+//     width: 100%;
+//     object-fit: cover;
+//     transition: transform 0.3s ease;
+//     height: 100%;
+//     border-radius: 15px;
+//   }
+// }
+
+// .locationSectionHeading {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: start;
+//   text-align: start;
+//   gap: 1rem;
+// }
+
+.locationContent {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 1rem;
+  height: fit-content;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  .locationSectionHeading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    gap: 1rem;
+
+    @media screen and (max-width: 768px) {
+      justify-content: start;
+      width: 100%;
+      height: fit-content;
+    }
+
+    h2,
+    p {
+      width: 100%;
+      text-align: start;
+    }
+
+    .googleMapStyle {
+      width: 100%;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .locationSectionImage {
+    width: 50%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

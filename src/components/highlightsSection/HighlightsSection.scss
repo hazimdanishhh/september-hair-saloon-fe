@@ -1,0 +1,70 @@
+.highlightsSectionHeading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.highlightsLayout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-items: center;
+  align-items: start;
+  gap: 1rem;
+
+  .highlightsTopHalf {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-items: center;
+    align-items: start;
+    gap: 1rem;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    .highlightsOuterInnerTopHalfLeft {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-items: center;
+      align-items: start;
+      gap: 1rem;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
+    .highlightsInnerInnerTopHalf {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-items: center;
+      align-items: start;
+      gap: 1rem;
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        height: 100%;
+      }
+    }
+
+    .highlightsOuterInnerTopHalfRight {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      justify-items: center;
+      align-items: start;
+      gap: 1rem;
+      height: 100%;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+  }
+}

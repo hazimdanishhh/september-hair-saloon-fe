@@ -1,0 +1,239 @@
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  justify-content: center;
+  position: relative;
+  color: $neutral100;
+  border-radius: 1rem;
+  padding: 2rem 2rem 3rem 2rem;
+  gap: 2rem;
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .contactFormHalf {
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .formSubmittedCard {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    width: fit-content;
+    background-color: $neutral100;
+    border: 1px solid $neutral800;
+    color: $neutral800;
+    border-radius: 20px;
+    padding: 1rem;
+    z-index: 900;
+
+    @media screen and (max-width: 768px) {
+      width: 90%;
+    }
+
+    .formSubmittedMessage {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      width: 100%;
+      text-align: start;
+    }
+
+    .formSubmittedHeading {
+      text-align: center;
+    }
+  }
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: $neutral400;
+}
+
+input,
+textarea,
+select {
+  background: none;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  border: 1px solid $neutral800;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: $neutral100;
+  background-color: $neutral700;
+
+  &:focus {
+    color: $neutral100;
+  }
+}
+
+/* --- Date & Time Input Styling --- */
+input[type="date"],
+input[type="time"] {
+  background-color: $neutral700;
+  border: 1px solid $neutral800;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: $neutral100;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+
+  &:hover {
+    border-color: $primary;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $primary;
+    background-color: rgb($neutral700, 0.03);
+  }
+
+  &::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+textarea {
+  height: 300px;
+}
+
+input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 5px solid $neutral700;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+
+  &:hover {
+    border-color: $primary;
+    background-color: $neutral100;
+  }
+
+  &:checked {
+    border-color: $primary;
+    background-color: $neutral100;
+  }
+}
+
+.contactFormInput {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  width: 100%;
+  gap: 0.5rem;
+
+  .contactFormRadioGroup {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    gap: 1rem;
+    border: none;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    legend {
+      margin-bottom: 1rem;
+    }
+
+    .contactFormRadioOption {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+}
+
+.selectWrapper {
+  position: relative;
+  width: 100%;
+
+  .contactFormSelect {
+    appearance: none;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    color: $neutral100;
+    font-size: 0.95rem;
+    cursor: pointer;
+
+    &:focus {
+      border-color: $neutral300;
+    }
+  }
+
+  .selectIcon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; // keeps select clickable
+    color: $neutral300;
+  }
+}
+
+.contactFormSubmitButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: 1px solid $primary;
+  background-color: $primary;
+  color: $neutral100;
+  transition: 0.3s;
+  gap: 1rem;
+
+  &:hover {
+    border: 1px solid $neutral100;
+    background-color: $neutral100;
+    color: $primary;
+    transition: 0.3s;
+  }
+}
+
+.contactFormNote {
+  text-align: start;
+  color: $neutral400;
+
+  a {
+    text-decoration: underline;
+    color: $neutral100;
+    transition: 0.3s;
+
+    &:hover {
+      color: $primary;
+      transition: 0.3s;
+    }
+  }
+}

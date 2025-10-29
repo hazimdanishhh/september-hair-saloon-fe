@@ -1,0 +1,85 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  background-color: $primary;
+  color: $neutral100;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  border: 1px solid $primary;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: $neutral100;
+    color: $primary;
+    border: 1px solid $primary;
+    transition: 0.3s;
+  }
+
+  @media screen and (max-width: 1024px) {
+    // padding: 0.5rem;
+  }
+
+  &.buttonType1 {
+    background-color: transparent;
+    border: 1px solid $neutral900;
+    color: $neutral900;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $neutral900;
+      color: $neutral100;
+      transition: 0.3s;
+    }
+  }
+
+
+    &.buttonType2 {
+    background-color: transparent;
+    border: 1px solid $neutral100;
+    color: $neutral100;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $neutral100;
+      color: $primary;
+      transition: 0.3s;
+    }
+  }
+
+
+      &.buttonType3 {
+    background-color: transparent;
+    border: 1px solid $secondary;
+    color: $secondary;
+    transition: 0.3s;
+  }
+}
+
+
+.legendToggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  .buttonContent {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .legendImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: contain;
+  }
+
+
+}
